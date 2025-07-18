@@ -3,6 +3,17 @@
 
 A beautifully designed, responsive online library shelf interface that provides an elegant way to browse, discover, and manage your digital book collection. Built with modern web technologies and featuring a warm, inviting design inspired by traditional wooden bookshelves.
 
+## Screenshots
+
+### Desktop View
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/056bbbf4-0d09-471e-8be4-9cafece99ddb" />
+
+### Mobile View
+<img width="476" height="767" alt="image" src="https://github.com/user-attachments/assets/7e9e4ca3-8d8a-462f-bca5-6decd07dd121" />
+
+### Book Details Modal
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/8388af01-8d71-4901-98f0-119b0078283b" />
+
 ## Features
 
 ### Core Features
@@ -293,17 +304,6 @@ If you encounter any issues or have questions:
   <h3>⭐ Star this repository if you found it helpful!</h3>
   <p>Made with ❤️ by Jayakrishna Vamsi</p>
 </div>
-
-## Screenshots
-
-### Desktop View
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/056bbbf4-0d09-471e-8be4-9cafece99ddb" />
-
-### Mobile View
-<img width="476" height="767" alt="image" src="https://github.com/user-attachments/assets/7e9e4ca3-8d8a-462f-bca5-6decd07dd121" />
-
-### Book Details Modal
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/8388af01-8d71-4901-98f0-119b0078283b" />
 
 ---
 
