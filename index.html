@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookNest - Online Library Shelf</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Main Container -->
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar Navigation -->
+            <nav class="col-lg-2 col-md-3 sidebar" id="sidebar">
+                <div class="sidebar-header">
+                    <h3 class="logo">
+                        <i class="fas fa-book-open"></i>
+                        BookNest
+                    </h3>
+                </div>
+                
+                <ul class="nav-links">
+                    <li><a href="#fiction" class="nav-link active" data-category="fiction">
+                        <i class="fas fa-dragon"></i>
+                        Fiction
+                    </a></li>
+                    <li><a href="#non-fiction" class="nav-link" data-category="non-fiction">
+                        <i class="fas fa-globe"></i>
+                        Non-Fiction
+                    </a></li>
+                    <li><a href="#self-help" class="nav-link" data-category="self-help">
+                        <i class="fas fa-lightbulb"></i>
+                        Self-Help
+                    </a></li>
+                    <li><a href="#tech" class="nav-link" data-category="tech">
+                        <i class="fas fa-laptop-code"></i>
+                        Technology
+                    </a></li>
+                    <li><a href="#history" class="nav-link" data-category="history">
+                        <i class="fas fa-landmark"></i>
+                        History
+                    </a></li>
+                </ul>
+                
+                <div class="sidebar-footer">
+                    <div class="user-info">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Welcome, Reader!</span>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Main Content -->
+            <main class="col-lg-10 col-md-9 main-content">
+                <!-- Hero Banner Section -->
+                <section class="hero-banner">
+                    <div class="banner-content">
+                        <h1 class="banner-title">Welcome to Your Digital Library</h1>
+                        <p class="banner-subtitle">Discover, read, and explore thousands of books at your fingertips</p>
+                        
+                        <div class="current-reading">
+                            <h3>Currently Reading</h3>
+                            <div class="reading-list">
+                                <div class="reading-item">
+                                    <div class="book-cover-small">
+                                        <img src="https://covers.openlibrary.org/b/olid/OL7353617M-S.jpg" alt="The Great Gatsby cover">
+                                    </div>
+                                    <div class="reading-info">
+                                        <h4>The Great Gatsby</h4>
+                                        <p>F. Scott Fitzgerald</p>
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 65%"></div>
+                                        </div>
+                                        <span class="progress-text">65% Complete</span>
+                                    </div>
+                                </div>
+                                <div class="reading-item">
+                                    <div class="book-cover-small">
+                                        <img src="https://covers.openlibrary.org/b/olid/OL27479669M-S.jpg" alt="Atomic Habits cover">
+                                    </div>
+                                    <div class="reading-info">
+                                        <h4>Atomic Habits</h4>
+                                        <p>James Clear</p>
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 30%"></div>
+                                        </div>
+                                        <span class="progress-text">30% Complete</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Books Grid Section -->
+                <section class="books-section">
+                    <div class="section-header">
+                        <h2>Browse Our Collection</h2>
+                        <div class="filter-tabs">
+                            <button class="filter-btn active" data-filter="all">All Books</button>
+                            <button class="filter-btn" data-filter="fiction">Fiction</button>
+                            <button class="filter-btn" data-filter="non-fiction">Non-Fiction</button>
+                            <button class="filter-btn" data-filter="self-help">Self-Help</button>
+                            <button class="filter-btn" data-filter="tech">Technology</button>
+                            <button class="filter-btn" data-filter="history">History</button>
+                        </div>
+                    </div>
+
+                    <div class="books-grid" id="booksGrid">
+                        <!-- Fiction Books -->
+                        <article class="book-card" data-category="fiction">
+                            <div class="book-cover">
+                                <img src="https://covers.openlibrary.org/b/olid/OL7353617M-M.jpg" alt="1984 book cover">
+                                <div class="book-overlay">
+                                    <button class="btn-read">Read Now</button>
+                                </div>
+                            </div>
+                            <div class="book-info">
+                                <h3 class="book-title">1984</h3>
+                                <p class="book-author">George Orwell</p>
+                                <div class="book-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="rating-text">4.8</span>
+                                </div>
+                                <span class="genre-tag fiction">Fiction</span>
+                            </div>
+                            <div class="book-tooltip">
+                                <p>"A dystopian masterpiece that explores themes of totalitarianism and surveillance."</p>
+                                <div class="tooltip-rating">
+                                    <strong>4.8/5</strong> • 2,340 reviews
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="book-card" data-category="fiction">
+                            <div class="book-cover">
+                                <img src="https://covers.openlibrary.org/b/olid/OL7353617M-M.jpg" alt="Pride and Prejudice book cover">
+                                <div class="book-overlay">
+                                    <button class="btn-read">Read Now</button>
+                                </div>
+                            </div>
+                            <div class="book-info">
+                                <h3 class="book-title">Pride and Prejudice</h3>
+                                <p class="book-author">Jane Austen</p>
+                                <div class="book-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <span class="rating-text">4.6</span>
+                                </div>
+                                <span class="genre-tag fiction">Fiction</span>
+                            </div>
+                            <div class="book-tooltip">
+                                <p>"A timeless romance that critiques social class and marriage in Georgian England."</p>
+                                <div class="tooltip-rating">
+                                    <strong>4.6/5</strong> • 1,890 reviews
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Non-Fiction Books -->
+                        <article class="book-card" data-category="non-fiction">
+                            <div class="book-cover">
+                                <img src="https://covers.openlibrary.org/b/olid/OL26298851M-M.jpg" alt="Sapiens book cover">
+                                <div class="book-overlay">
+                                    <button class="btn-read">Read Now</button>
+                                </div>
+                            </div>
+                            <div class="book-info">
+                                <h3 class="book-title">Sapiens</h3>
+                                <p class="book-author">Yuval Noah Harari</p>
+                                <div class="book-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="rating-text">4.9</span>
+                                </div>
+                                <span class="genre-tag non-fiction">Non-Fiction</span>
+                            </div>
+                            <div class="book-tooltip">
+                                <p>"A fascinating exploration of human history and our species' journey to dominance."</p>
+                                <div class="tooltip-rating">
+                                    <strong>4.9/5</strong> • 3,210 reviews
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Self-Help Books -->
+                        <article class="book-card" data-category="self-help">
+                            <div class="book-cover">
+                                <img src="https://covers.openlibrary.org/b/olid/OL27479669M-M.jpg" alt="Atomic Habits book cover">
+                                <div class="book-overlay">
+                                    <button class="btn-read">Read Now</button>
+                                </div>
+                            </div>
+                            <div class="book-info">
+                                <h3 class="book-title">Atomic Habits</h3>
+                                <p class="book-author">James Clear</p>
+                                <div class="book-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="rating-text">4.7</span>
+                                </div>
+                                <span class="genre-tag self-help">Self-Help</span>
+                            </div>
+                            <div class="book-tooltip">
+                                <p>"Transform your life with tiny changes that create remarkable results."</p>
+                                <div class="tooltip-rating">
+                                    <strong>4.7/5</strong> • 4,120 reviews
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Technology Books -->
+                        <article class="book-card" data-category="tech">
+                            <div class="book-cover">
+                                <img src="https://covers.openlibrary.org/b/olid/OL25428504M-M.jpg" alt="Clean Code book cover">
+                                <div class="book-overlay">
+                                    <button class="btn-read">Read Now</button>
+                                </div>
+                            </div>
+                            <div class="book-info">
+                                <h3 class="book-title">Clean Code</h3>
+                                <p class="book-author">Robert C. Martin</p>
+                                <div class="book-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <span class="rating-text">4.5</span>
+                                </div>
+                                <span class="genre-tag tech">Technology</span>
+                            </div>
+                            <div class="book-tooltip">
+                                <p>"Essential principles for writing readable, maintainable code."</p>
+                                <div class="tooltip-rating">
+                                    <strong>4.5/5</strong> • 1,560 reviews
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- History Books -->
+                        <article class="book-card" data-category="history">
+                            <div class="book-cover">
+                                <img src="https://covers.openlibrary.org/b/olid/OL7427988M-M.jpg" alt="The Second World War book cover">
+                                <div class="book-overlay">
+                                    <button class="btn-read">Read Now</button>
+                                </div>
+                            </div>
+                            <div class="book-info">
+                                <h3 class="book-title">The Second World War</h3>
+                                <p class="book-author">Winston Churchill</p>
+                                <div class="book-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="rating-text">4.8</span>
+                                </div>
+                                <span class="genre-tag history">History</span>
+                            </div>
+                            <div class="book-tooltip">
+                                <p>"A comprehensive account of WWII by the man who led Britain through it."</p>
+                                <div class="tooltip-rating">
+                                    <strong>4.8/5</strong> • 890 reviews
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Additional books for better grid layout -->
+                        <article class="book-card" data-category="fiction">
+                            <div class="book-cover">
+                                <img src="https://covers.openlibrary.org/b/olid/OL7353617M-M.jpg" alt="The Great Gatsby book cover">
+                                <div class="book-overlay">
+                                    <button class="btn-read">Read Now</button>
+                                </div>
+                            </div>
+                            <div class="book-info">
+                                <h3 class="book-title">The Great Gatsby</h3>
+                                <p class="book-author">F. Scott Fitzgerald</p>
+                                <div class="book-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <span class="rating-text">4.4</span>
+                                </div>
+                                <span class="genre-tag fiction">Fiction</span>
+                            </div>
+                            <div class="book-tooltip">
+                                <p>"A critique of the American Dream set in the Jazz Age."</p>
+                                <div class="tooltip-rating">
+                                    <strong>4.4/5</strong> • 2,100 reviews
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="book-card" data-category="self-help">
+                            <div class="book-cover">
+                                <img src="https://covers.openlibrary.org/b/olid/OL3696280M-M.jpg" alt="Think and Grow Rich book cover">
+                                <div class="book-overlay">
+                                    <button class="btn-read">Read Now</button>
+                                </div>
+                            </div>
+                            <div class="book-info">
+                                <h3 class="book-title">Think and Grow Rich</h3>
+                                <p class="book-author">Napoleon Hill</p>
+                                <div class="book-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <span class="rating-text">4.2</span>
+                                </div>
+                                <span class="genre-tag self-help">Self-Help</span>
+                            </div>
+                            <div class="book-tooltip">
+                                <p>"Timeless principles for achieving success and financial freedom."</p>
+                                <div class="tooltip-rating">
+                                    <strong>4.2/5</strong> • 1,780 reviews
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Recommended Reads Section -->
+                <section class="recommended-section">
+                    <h2>Recommended for You</h2>
+                    <div class="recommended-scroll">
+                        <div class="recommended-item">
+                            <div class="rec-book-cover">
+                                <img src="https://covers.openlibrary.org/b/olid/OL7472033M-M.jpg" alt="Dune book cover">
+                            </div>
+                            <h4>Dune</h4>
+                            <p>Frank Herbert</p>
+                            <div class="rec-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="recommended-item">
+                            <div class="rec-book-cover">
+                                <img src="https://covers.openlibrary.org/b/olid/OL6285398M-M.jpg" alt="Meditations book cover">
+                            </div>
+                            <h4>Meditations</h4>
+                            <p>Marcus Aurelius</p>
+                            <div class="rec-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="recommended-item">
+                            <div class="rec-book-cover">
+                                <img src="https://covers.openlibrary.org/b/olid/OL3985347M-M.jpg" alt="JavaScript Guide book cover">
+                            </div>
+                            <h4>JavaScript: The Good Parts</h4>
+                            <p>Douglas Crockford</p>
+                            <div class="rec-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="recommended-item">
+                            <div class="rec-book-cover">
+                                <img src="https://covers.openlibrary.org/b/olid/OL26433390M-M.jpg" alt="SPQR book cover">
+                            </div>
+                            <h4>SPQR</h4>
+                            <p>Mary Beard</p>
+                            <div class="rec-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="recommended-item">
+                            <div class="rec-book-cover">
+                                <img src="https://covers.openlibrary.org/b/olid/OL24958031M-M.jpg" alt="Mindset book cover">
+                            </div>
+                            <h4>Mindset</h4>
+                            <p>Carol Dweck</p>
+                            <div class="rec-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
